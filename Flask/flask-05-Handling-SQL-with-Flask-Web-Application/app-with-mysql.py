@@ -6,7 +6,7 @@ from flaskext.mysql import MySQL
 app = Flask(__name__)
 
 # Configure mysql database
-app.config['MYSQL_DATABASE_HOST'] = 'ilker.cumdwv44azfu.us-east-1.rds.amazonaws.com'
+app.config['MYSQL_DATABASE_HOST'] = 'taylor.cumdwv44azfu.us-east-1.rds.amazonaws.com'
 app.config['MYSQL_DATABASE_USER'] = 'admin'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'Clarusway_1'
 app.config['MYSQL_DATABASE_DB'] = 'clarusway'
@@ -106,5 +106,6 @@ def add_email():
         return render_template('add-email.html', show_result=False)
 
 # Add a statement to run the Flask application which can be reached from any host on port 80.
-if __name__=='__main__':
-    app.run(host='0.0.0.0', port=80)
+if __name__ == '__main__':
+   app.run(debug=True)
+   # app.run(host='0.0.0.0', port=80)
